@@ -13,3 +13,4 @@
 
 ## STRETCH GOALS:
 - Make a constructor function for site owner to add additional running shoes to the page
+- Karnaugh map (data structure for quiz questions)
