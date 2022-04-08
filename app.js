@@ -14,7 +14,12 @@ let runShoes = document.getElementById('runShoes');
 let preferSoft = document.getElementById('preferSoft');
 let preferFirm = document.getElementById('preferFirm');
 let results = document.getElementById('submit');
+let shoeRender = document.getElementById('shoeImg');
 let shoeArr;
+let shoeChoice;
+let resetButton = document.getElementById('reset');
+
+
 
 // Constructor Function
 function Shoe(company, name, type, filePath) {
@@ -126,8 +131,32 @@ function shoeSuggestion(){
     }
     console.log('stability cushion');
   }
+  return suggestedShoe;
 }
+
+function clearRender (){
+  shoeChoice = shoeSuggestion();
+  while (shoeRender.firstChild){
+    shoeRender.removeChild(shoeRender.firstChild);
+  }
+}
+
 // Render Function
+function render (){
+  clearRender();
+  shoeChoice = shoeSuggestion();
+  console.log(shoeChoice);
+
+  for (let i = 0; i < shoeChoice.length; i++){
+    let shoeImg = document.createElement('p');
+    shoeImg.textContent = `${shoeChoice[i]}`;
+    shoeImg.id = shoeChoice[i];
+    shoeRender.appendChild(shoeImg);
+
+  }
+  return shoeChoice;
+}
+
 
 // Event Listeners
 highArch.addEventListener('click', function (event) {
@@ -188,5 +217,15 @@ preferFirm.addEventListener('click', function (event) {
 
 results.addEventListener('click', function (event){
   event.preventDefault();
-  shoeSuggestion();
+  // shoeSuggestion();
+  render();
+
+
 });
+// resetButton.addEventListener('click', function (event){
+//   event.preventDefault();
+//   // shoeSuggestion();
+//   clearRender();
+
+
+// });
