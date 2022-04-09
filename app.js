@@ -17,6 +17,7 @@ let results = document.getElementById('submit');
 let shoeRender = document.getElementById('shoeImg');
 let shoeArr;
 let shoeChoice;
+let preference;
 let resetButton = document.getElementById('reset');
 
 
@@ -60,7 +61,7 @@ function shoeSuggestion(){
 
   if(archHeight === true && runDistance === true && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      let preference = 'neutral max cushion';
+      preference = 'neutral max cushion';
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -70,7 +71,7 @@ function shoeSuggestion(){
   }
   else if(archHeight === true && cushionPreference === false){
     for(let i = 0; i < shoeArr.length; i++){
-      let preference = 'neutral cushion';
+      preference = 'neutral cushion';
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -80,7 +81,7 @@ function shoeSuggestion(){
   }
   else if(archHeight === true && gymPreference === false && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      let preference = 'neutral max cushion';
+      preference = 'neutral max cushion';
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -90,7 +91,7 @@ function shoeSuggestion(){
   }
   else if(archHeight === true && runDistance === false && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      let preference = 'neutral cushion';
+      preference = 'neutral cushion';
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -100,7 +101,7 @@ function shoeSuggestion(){
   }
   else if(archHeight === false && runDistance === true && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      let preference = 'stability max cushion';
+      preference = 'stability max cushion';
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -110,7 +111,7 @@ function shoeSuggestion(){
   }
   else if(archHeight === false && cushionPreference === false){
     for(let i = 0; i < shoeArr.length; i++){
-      let preference = 'stability cushion';
+      preference = 'stability cushion';
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -120,7 +121,7 @@ function shoeSuggestion(){
   }
   else if(archHeight === false && gymPreference === false && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      let preference = 'stability max cushion';
+      preference = 'stability max cushion';
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -130,7 +131,7 @@ function shoeSuggestion(){
   }
   else if(archHeight === false && runDistance === false && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      let preference = 'stability cushion';
+      preference = 'stability cushion';
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -153,7 +154,9 @@ function render (){
   clearRender();
   shoeChoice = shoeSuggestion();
   console.log(shoeChoice);
-
+  let title = document.createElement('h2');
+  title.textContent = `${preference}`;
+  shoeRender.appendChild(title);
   for (let i = 0; i < shoeChoice.length; i++){
     let shoeImg = document.createElement('img');
     shoeImg.src = `${shoeChoice[i]}`;
