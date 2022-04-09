@@ -60,6 +60,7 @@ function shoeSuggestion(){
   if(archHeight === true && runDistance === true && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
       preference = 'neutral max cushion';
+      localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -70,6 +71,7 @@ function shoeSuggestion(){
   else if(archHeight === true && cushionPreference === false){
     for(let i = 0; i < shoeArr.length; i++){
       preference = 'neutral cushion';
+      localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -80,6 +82,7 @@ function shoeSuggestion(){
   else if(archHeight === true && gymPreference === false && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
       preference = 'neutral max cushion';
+      localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -90,6 +93,7 @@ function shoeSuggestion(){
   else if(archHeight === true && runDistance === false && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
       preference = 'neutral cushion';
+      localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -100,6 +104,7 @@ function shoeSuggestion(){
   else if(archHeight === false && runDistance === true && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
       preference = 'stability max cushion';
+      localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -110,6 +115,7 @@ function shoeSuggestion(){
   else if(archHeight === false && cushionPreference === false){
     for(let i = 0; i < shoeArr.length; i++){
       preference = 'stability cushion';
+      localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -120,6 +126,7 @@ function shoeSuggestion(){
   else if(archHeight === false && gymPreference === false && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
       preference = 'stability max cushion';
+      localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -130,6 +137,7 @@ function shoeSuggestion(){
   else if(archHeight === false && runDistance === false && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
       preference = 'stability cushion';
+      localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i].filePath);
         console.log(suggestedShoe);
@@ -160,20 +168,28 @@ function render (){
     shoeImg.src = `${shoeChoice[i]}`;
     shoeImg.id = shoeChoice[i];
     shoeRender.appendChild(shoeImg);
-
   }
+  localStorage.renderInfo = JSON.stringify(shoeChoice);
   return shoeChoice;
 }
 
-// function savedQuiz(){
-//   if(localStorage.getItem('archHeight') && localStorage.getItem('runDistance') && localStorage.getItem('gymPreference') && localStorage.getItem('cushionPreference')){
-//     localStorage.getItem('archHeight');
-//     localStorage.getItem('runDistance');
-//     localStorage.getItem('gymPreference');
-//     localStorage.getItem('cushionPreference');
-//   }
-// }
-// savedQuiz();
+function savedQuiz(){
+  if(localStorage.getItem('renderInfo')){
+    shoeChoice = JSON.parse(localStorage.getItem('renderInfo'));
+    console.log(shoeChoice);
+    preference = JSON.parse(localStorage.getItem('preference'));
+    let title = document.createElement('h2');
+    title.textContent = `${preference}`;
+    shoeRender.appendChild(title);
+    for (let i = 0; i < shoeChoice.length; i++){
+      let shoeImg = document.createElement('img');
+      shoeImg.src = `${shoeChoice[i]}`;
+      shoeImg.id = shoeChoice[i];
+      shoeRender.appendChild(shoeImg);
+    }
+  }
+}
+savedQuiz();
 
 // Event Listeners
 highArch.addEventListener('click', function (event) {
