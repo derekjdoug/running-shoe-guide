@@ -18,9 +18,7 @@ let preferSoft = document.getElementById('preferSoft');
 let preferFirm = document.getElementById('preferFirm');
 let results = document.getElementById('submit');
 let shoeRender = document.getElementById('shoeImg');
-let resetButton = document.getElementById('reset');
-
-
+let clearResults = document.getElementById('clear');
 
 // Constructor Function
 function Shoe(company, name, type, filePath) {
@@ -49,13 +47,6 @@ console.log(shoeArr);
 // Conditional...Quiz logic
 function shoeSuggestion(){
   let suggestedShoe = [];
-
-  // if(localStorage.getItem('archHeight') && localStorage.getItem('runDistance') && localStorage.getItem('gymPreference') && localStorage.getItem('cushionPreference')){
-  //   archHeight = localStorage.getItem('archHeight');
-  //   runDistance = localStorage.getItem('runDistance');
-  //   gymPreference = localStorage.getItem('gymPreference');
-  //   cushionPreference = localStorage.getItem('cushionPreference');
-  // }
 
   if(archHeight === true && runDistance === true && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
@@ -264,15 +255,11 @@ preferFirm.addEventListener('click', function (event) {
 
 results.addEventListener('click', function (event){
   event.preventDefault();
-  // shoeSuggestion();
   render();
-
-
 });
-// resetButton.addEventListener('click', function (event){
-//   event.preventDefault();
-//   // shoeSuggestion();
-//   clearRender();
 
-
-// });
+clearResults.addEventListener('click', function (event){
+  event.preventDefault();
+  clearRender();
+  localStorage.clear();
+});
