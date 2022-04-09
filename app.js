@@ -125,25 +125,25 @@ function shoeSuggestion(){
   }
   else if(archHeight === false && gymPreference === false && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'Stability max Cushion';
+      preference = 'Stability Max Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('stability max Cushion');
+    console.log('stability Max Cushion');
   }
   else if(archHeight === false && runDistance === false && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'stability Cushion';
+      preference = 'Stability Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
         suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('stability Cushion');
+    console.log('Stability Cushion');
   }
   return suggestedShoe;
 }
