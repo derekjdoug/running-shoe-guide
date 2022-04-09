@@ -163,6 +163,13 @@ function render (){
     figCap.textContent = `${shoeChoice[i].company} ${shoeChoice[i].name}`;
     shoeRender.appendChild(figCap);
   }
+  let credit = document.createElement('a');
+  credit.href = 'https://www.vecteezy.com/free-vector/shoes';
+  credit.textContent = 'Shoes Vectors by Vecteezy';
+  shoeRender.appendChild(credit);
+  let addCredit = document.createElement('p');
+  addCredit.textContent = 'Additional Customization Done by Zayah Lang';
+  shoeRender.appendChild(addCredit);
   localStorage.renderInfo = JSON.stringify(shoeChoice);
   return shoeChoice;
 }
@@ -184,6 +191,13 @@ function savedQuiz(){
       figCap.textContent = `${shoeChoice[i].company} ${shoeChoice[i].name}`;
       shoeRender.appendChild(figCap);
     }
+    let credit = document.createElement('a');
+    credit.href = 'https://www.vecteezy.com/free-vector/shoes';
+    credit.textContent = 'Shoes Vectors by Vecteezy';
+    shoeRender.appendChild(credit);
+    let addCredit = document.createElement('p');
+    addCredit.textContent = 'Additional Customization Done by Zayah Lang';
+    shoeRender.appendChild(addCredit);
   }
 }
 savedQuiz();
