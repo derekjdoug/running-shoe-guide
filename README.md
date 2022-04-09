@@ -16,5 +16,6 @@ This wireframe represents the CSS grid layout of the page.
 Can be found in  our [requirements](requirements.md) page or [project list](PROJECT-LIST.md) pages.
 
 ### Links and Resources
+- [css]-https://www.bitdegree.org/learn/css-opacity#:~:text=Learn%20on%20Udacity-,Setting%20Transparent%20Boxes,to%20multiple%20elements.&text=Tip%3A%20you%20should%20notice%20that,to%20keep%20the%20text%20opacity.
 
 ### Reflections and Comments
