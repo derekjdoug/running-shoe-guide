@@ -5,6 +5,9 @@ let archHeight;
 let runDistance;
 let gymPreference;
 let cushionPreference;
+let shoeArr;
+let shoeChoice;
+let preference;
 let highArch = document.getElementById('highArch');
 let lowArch = document.getElementById('lowArch');
 let moreThanFifteen = document.getElementById('moreThanFifteen');
@@ -15,9 +18,6 @@ let preferSoft = document.getElementById('preferSoft');
 let preferFirm = document.getElementById('preferFirm');
 let results = document.getElementById('submit');
 let shoeRender = document.getElementById('shoeImg');
-let shoeArr;
-let shoeChoice;
-let preference;
 let resetButton = document.getElementById('reset');
 
 
@@ -28,8 +28,6 @@ function Shoe(company, name, type, filePath) {
   this.name = name;
   this.type = type;
   this.filePath = filePath;
-
-  // shoeArr.push(this);
 }
 
 shoeArr = [
