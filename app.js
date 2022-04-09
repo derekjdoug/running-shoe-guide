@@ -31,18 +31,18 @@ function Shoe(company, name, type, filePath) {
 }
 
 shoeArr = [
-  new Shoe('Creeks', 'Spectre', 'neutral cushion', 'img/creeks-spectre.png'),
-  new Shoe('Windy', 'Cloud', 'neutral cushion', 'img/windy-cloud.png'),
-  new Shoe('Joggies', 'Cruise', 'neutral cushion', 'img/joggies-cruise.png'),
-  new Shoe('Creeks', 'Explosion', 'neutral max cushion', 'img/creeks-explosion.png'),
-  new Shoe('Windy', 'Thunderhead', 'neutral max cushion', 'img/windy-thunderhead.png'),
-  new Shoe('Joggies', 'Victory', 'neutral max cushion', 'img/joggies-victory.png'),
-  new Shoe('Creeks', 'Seattle', 'stability cushion', 'img/creeks-seattle.png'),
-  new Shoe('Windy', 'PT-201', 'stability cushion', 'img/windy-pt201.png'),
-  new Shoe('Joggies', 'Support', 'stability cushion', 'img/joggies-support.png'),
-  new Shoe('Creeks', 'Excitement', 'stability max cushion', 'img/creeks-excitement.png'),
-  new Shoe('Windy', 'Canoes', 'stability max cushion', 'img/windy-canoes.png'),
-  new Shoe('Joggies', 'Derechos', 'stability max cushion', 'img/joggies-derechos.png')
+  new Shoe('Creeks', 'Spectre', 'Neutral Cushion', 'img/creeks-spectre.png'),
+  new Shoe('Windy', 'Cloud', 'Neutral Cushion', 'img/windy-cloud.png'),
+  new Shoe('Joggies', 'Cruise', 'Neutral Cushion', 'img/joggies-cruise.png'),
+  new Shoe('Creeks', 'Explosion', 'Neutral Max Cushion', 'img/creeks-explosion.png'),
+  new Shoe('Windy', 'Thunderhead', 'Neutral Max Cushion', 'img/windy-thunderhead.png'),
+  new Shoe('Joggies', 'Victory', 'Neutral Max Cushion', 'img/joggies-victory.png'),
+  new Shoe('Creeks', 'Seattle', 'Stability Cushion', 'img/creeks-seattle.png'),
+  new Shoe('Windy', 'PT-201', 'Stability Cushion', 'img/windy-pt201.png'),
+  new Shoe('Joggies', 'Support', 'Stability Cushion', 'img/joggies-support.png'),
+  new Shoe('Creeks', 'Excitement', 'Stability Max Cushion', 'img/creeks-excitement.png'),
+  new Shoe('Windy', 'Canoes', 'Stability Max Cushion', 'img/windy-canoes.png'),
+  new Shoe('Joggies', 'Derechos', 'Stability Max Cushion', 'img/joggies-derechos.png')
 ];
 console.log(shoeArr);
 
@@ -59,91 +59,91 @@ function shoeSuggestion(){
 
   if(archHeight === true && runDistance === true && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'neutral max cushion';
+      preference = 'Neutral Max Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
-        suggestedShoe.push(shoeArr[i].filePath);
+        suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('neutral max cushion');
+    console.log('Neutral Max Cushion');
   }
   else if(archHeight === true && cushionPreference === false){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'neutral cushion';
+      preference = 'Neutral Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
-        suggestedShoe.push(shoeArr[i].filePath);
+        suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('neutral cushion');
+    console.log('Neutral Cushion');
   }
   else if(archHeight === true && gymPreference === false && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'neutral max cushion';
+      preference = 'Neutral Max Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
-        suggestedShoe.push(shoeArr[i].filePath);
+        suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('neutral max cushion');
+    console.log('Neutral Max Cushion');
   }
   else if(archHeight === true && runDistance === false && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'neutral cushion';
+      preference = 'Neutral Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
-        suggestedShoe.push(shoeArr[i].filePath);
+        suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('neutral cushion');
+    console.log('Neutral Cushion');
   }
   else if(archHeight === false && runDistance === true && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'stability max cushion';
+      preference = 'Stability Max Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
-        suggestedShoe.push(shoeArr[i].filePath);
+        suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('stability max cushion');
+    console.log('Stability Max Cushion');
   }
   else if(archHeight === false && cushionPreference === false){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'stability cushion';
+      preference = 'Stability Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
-        suggestedShoe.push(shoeArr[i].filePath);
+        suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('stability cushion');
+    console.log('Stability Cushion');
   }
   else if(archHeight === false && gymPreference === false && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'stability max cushion';
+      preference = 'Stability max Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
-        suggestedShoe.push(shoeArr[i].filePath);
+        suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('stability max cushion');
+    console.log('stability max Cushion');
   }
   else if(archHeight === false && runDistance === false && gymPreference === true && cushionPreference === true){
     for(let i = 0; i < shoeArr.length; i++){
-      preference = 'stability cushion';
+      preference = 'stability Cushion';
       localStorage.preference = JSON.stringify(preference);
       if(shoeArr[i].type === preference){
-        suggestedShoe.push(shoeArr[i].filePath);
+        suggestedShoe.push(shoeArr[i]);
         console.log(suggestedShoe);
       }
     }
-    console.log('stability cushion');
+    console.log('stability Cushion');
   }
   return suggestedShoe;
 }
@@ -165,9 +165,12 @@ function render (){
   shoeRender.appendChild(title);
   for (let i = 0; i < shoeChoice.length; i++){
     let shoeImg = document.createElement('img');
-    shoeImg.src = `${shoeChoice[i]}`;
-    shoeImg.id = shoeChoice[i];
+    shoeImg.src = `${shoeChoice[i].filePath}`;
+    shoeImg.id = shoeChoice[i].filePath;
     shoeRender.appendChild(shoeImg);
+    let figCap = document.createElement('figcaption');
+    figCap.textContent = `${shoeChoice[i].company} ${shoeChoice[i].name}`;
+    shoeRender.appendChild(figCap);
   }
   localStorage.renderInfo = JSON.stringify(shoeChoice);
   return shoeChoice;
@@ -183,9 +186,12 @@ function savedQuiz(){
     shoeRender.appendChild(title);
     for (let i = 0; i < shoeChoice.length; i++){
       let shoeImg = document.createElement('img');
-      shoeImg.src = `${shoeChoice[i]}`;
-      shoeImg.id = shoeChoice[i];
+      shoeImg.src = `${shoeChoice[i].filePath}`;
+      shoeImg.id = shoeChoice[i].filePath;
       shoeRender.appendChild(shoeImg);
+      let figCap = document.createElement('figcaption');
+      figCap.textContent = `${shoeChoice[i].company} ${shoeChoice[i].name}`;
+      shoeRender.appendChild(figCap);
     }
   }
 }
