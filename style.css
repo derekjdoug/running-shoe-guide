@@ -13,13 +13,13 @@
 
 }
 .grid-items{
- 
+
   grid-column: 1 / 4;
   grid-row: 1 / 2;
   /* grid-template-rows: 6; */
   height: 50px;
-  
-  
+
+
 }
 
 .grid-item-1{
@@ -54,6 +54,11 @@
 .grid-item-6{
   grid-column: 2 / 3;
   grid-row: 7 / 8;
+  margin: 25px;
+}
+
+#shoeImg img {
+  max-width: 250px;
   margin: 25px;
 }
 
