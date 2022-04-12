@@ -296,3 +296,7 @@ clearResults.addEventListener('click', function (event){
   clearRender();
   localStorage.clear();
 });
+
+shoeRender.addEventListener('click', function(){
+  document.location.href = 'learningCenter.html';
+});
