@@ -202,9 +202,6 @@ function savedQuiz(){
 }
 savedQuiz();
 
-// let colors = ['grey','white',];
-// let i = 0;
-
 // Event Listeners
 highArch.addEventListener('click', function (event) {
   event.preventDefault();
@@ -212,8 +209,8 @@ highArch.addEventListener('click', function (event) {
   archHeight = true;
   localStorage.setItem('archHeight', archHeight);
   console.log(`archHeight: ${archHeight}`);
-  // this.style.backgroundColor = colors[i];
-  // i = i >= colors.length - 1 ? 0 : i + 1;
+  this.style.backgroundColor = 'lightskyblue';
+  lowArch.style.backgroundColor = 'white';
 });
 
 lowArch.addEventListener('click', function (event) {
@@ -222,8 +219,8 @@ lowArch.addEventListener('click', function (event) {
   archHeight = false;
   localStorage.setItem('archHeight', archHeight);
   console.log(`archHeight: ${archHeight}`);
-  // this.style.backgroundColor = colors[i];
-  // i = i >= colors.length - 1 ? 0 : i + 1;
+  this.style.backgroundColor = 'lightskyblue';
+  highArch.style.backgroundColor = 'white';
 });
 
 moreThanFifteen.addEventListener('click', function (event) {
@@ -232,8 +229,8 @@ moreThanFifteen.addEventListener('click', function (event) {
   runDistance = true;
   localStorage.setItem('runDistance', runDistance);
   console.log(`runDistance: ${runDistance}`);
-  // this.style.backgroundColor = colors[i];
-  // i = i >= colors.length - 1 ? 0 : i + 1;
+  this.style.backgroundColor = 'lightskyblue';
+  lessThanFifteen.style.backgroundColor = 'white';
 });
 
 lessThanFifteen.addEventListener('click', function (event) {
@@ -242,8 +239,8 @@ lessThanFifteen.addEventListener('click', function (event) {
   runDistance = false;
   localStorage.setItem('runDistance', runDistance);
   console.log(`runDistance: ${runDistance}`);
-  // this.style.backgroundColor = colors[i];
-  // i = i >= colors.length - 1 ? 0 : i + 1;
+  this.style.backgroundColor = 'lightskyblue';
+  moreThanFifteen.style.backgroundColor = 'white';
 });
 
 gymShoes.addEventListener('click', function (event) {
@@ -252,8 +249,8 @@ gymShoes.addEventListener('click', function (event) {
   gymPreference = true;
   localStorage.setItem('gymPreference', gymPreference);
   console.log(`gymPreference: ${gymPreference}`);
-  // this.style.backgroundColor = colors[i];
-  // i = i >= colors.length - 1 ? 0 : i + 1;
+  this.style.backgroundColor = 'lightskyblue';
+  runShoes.style.backgroundColor = 'white';
 });
 
 runShoes.addEventListener('click', function (event) {
@@ -262,8 +259,8 @@ runShoes.addEventListener('click', function (event) {
   gymPreference = false;
   localStorage.setItem('gymPreference', gymPreference);
   console.log(`gymPreference: ${gymPreference}`);
-  // this.style.backgroundColor = colors[i];
-  // i = i >= colors.length - 1 ? 0 : i + 1;
+  this.style.backgroundColor = 'lightskyblue';
+  gymShoes.style.backgroundColor = 'white';
 });
 
 preferSoft.addEventListener('click', function (event) {
@@ -272,8 +269,8 @@ preferSoft.addEventListener('click', function (event) {
   cushionPreference = true;
   localStorage.setItem('cushionPreference', cushionPreference);
   console.log(`cushionPreference: ${cushionPreference}`);
-  // this.style.backgroundColor = colors[i];
-  // i = i >= colors.length - 1 ? 0 : i + 1;
+  this.style.backgroundColor = 'lightskyblue';
+  preferFirm.style.backgroundColor = 'white';
 });
 
 preferFirm.addEventListener('click', function (event) {
@@ -282,8 +279,8 @@ preferFirm.addEventListener('click', function (event) {
   cushionPreference = false;
   localStorage.setItem('cushionPreference', cushionPreference);
   console.log(`cushionPreference: ${cushionPreference}`);
-  // this.style.backgroundColor = colors[i];
-  // i = i >= colors.length - 1 ? 0 : i + 1;
+  this.style.backgroundColor = 'lightskyblue';
+  preferSoft.style.backgroundColor = 'white';
 });
 
 results.addEventListener('click', function (event){
@@ -295,6 +292,14 @@ clearResults.addEventListener('click', function (event){
   event.preventDefault();
   clearRender();
   localStorage.clear();
+  highArch.style.backgroundColor = 'white';
+  lowArch.style.backgroundColor = 'white';
+  moreThanFifteen.style.backgroundColor = 'white';
+  lessThanFifteen.style.backgroundColor = 'white';
+  gymShoes.style.backgroundColor = 'white';
+  runShoes.style.backgroundColor = 'white';
+  preferFirm.style.backgroundColor = 'white';
+  preferSoft.style.backgroundColor = 'white';
 });
 
 shoeRender.addEventListener('click', function(){
