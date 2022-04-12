@@ -151,7 +151,7 @@ function render (){
   clearRender();
   shoeChoice = shoeSuggestion();
   console.log(shoeChoice);
-  let title = document.createElement('h2');
+  let title = document.createElement('h4');
   title.textContent = `${preference}`;
   shoeRender.appendChild(title);
   for (let i = 0; i < shoeChoice.length; i++){
@@ -179,7 +179,7 @@ function savedQuiz(){
     shoeChoice = JSON.parse(localStorage.getItem('renderInfo'));
     console.log(shoeChoice);
     preference = JSON.parse(localStorage.getItem('preference'));
-    let title = document.createElement('h2');
+    let title = document.createElement('h4');
     title.textContent = `${preference}`;
     shoeRender.appendChild(title);
     for (let i = 0; i < shoeChoice.length; i++){

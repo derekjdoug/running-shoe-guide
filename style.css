@@ -167,6 +167,11 @@ h3{
   border: 1px solid black;
 }
 
+h4{
+  font-size: 40px;
+  color: white;
+}
+
 #highArch{
   margin: .2em;
   padding: .7em 1.5em;
