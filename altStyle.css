@@ -17,11 +17,12 @@ body {
 }
 .abtmain{
   display: flex;
-  
+
 }
 .abtmain > div{
   display:flex;
-  flex-direction: column; 
+  flex-direction: column;
+  /* margin: auto; */
 }
 .pics{
   height: 420px;
@@ -145,9 +146,10 @@ footer{
   display: flex;
   justify-content: center;
 }
+
 .aboutUs > p{
   width: 55%;
-  margin:auto;
+  margin: auto;
   /* text-align: center; */
 
 }
