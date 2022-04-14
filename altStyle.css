@@ -15,6 +15,23 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.abtmain{
+  display: flex;
+
+}
+.abtmain > div{
+  display:flex;
+  flex-direction: column;
+  /* margin: auto; */
+}
+.pics{
+  height: 420px;
+  width: 350px;
+  margin:auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 
 .nav1 {
   background-color: #E66863;
@@ -63,6 +80,13 @@ h2 {
   background-color: #E66863;
   width: 45%;
   border: black solid 1px;
+}
+
+h4{
+  text-align: center;
+  font-size: x-large;
+  /* text-decoration: underline; */
+  margin-bottom: 20px;
 }
 
 .div1 {
@@ -121,4 +145,11 @@ footer{
   margin-top: 350px;
   display: flex;
   justify-content: center;
+}
+
+.aboutUs > p{
+  width: 55%;
+  margin: auto;
+  /* text-align: center; */
+
 }
